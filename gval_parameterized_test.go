@@ -289,14 +289,14 @@ func TestParameterized(t *testing.T) {
 
 				name:       "Multiple comparator/logical operators (#30)",
 				expression: "(foo >= 2887057408 && foo <= 2887122943) || (foo >= 168100864 && foo <= 168118271)",
-				parameter:  map[string]interface{}{"foo": 2887057409},
+				parameter:  map[string]interface{}{"foo": int64(2887057409)},
 				want:       true,
 			},
 			{
 
 				name:       "Multiple comparator/logical operators, opposite order (#30)",
 				expression: "(foo >= 168100864 && foo <= 168118271) || (foo >= 2887057408 && foo <= 2887122943)",
-				parameter:  map[string]interface{}{"foo": 2887057409},
+				parameter:  map[string]interface{}{"foo": int64(2887057409)},
 				want:       true,
 			},
 			{
